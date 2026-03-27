@@ -1,0 +1,194 @@
+[
+  {
+    "id": 1,
+    "title": "ChatGPT",
+    "description": "The industry-leading conversational agent powered by GPT-5.\nExcels at complex reasoning, coding, and multimodal creative tasks.",
+    "price": 20,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg",
+    "status": "popular"
+  },
+  {
+    "id": 2,
+    "title": "Google Gemini",
+    "description": "Google's most capable multimodal AI integrated into Workspace.\nFeatures a massive 2-million token context window for deep research.",
+    "price": 19.99,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg",
+    "status": "favourite"
+  },
+  {
+    "id": 3,
+    "title": "Claude",
+    "description": "Anthropic's safety-focused AI known for human-like writing.\nHighly preferred by developers for its precise coding and Artifacts UI.",
+    "price": 20,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/47/Claude_AI_logo.svg",
+    "status": "popular"
+  },
+  {
+    "id": 4,
+    "title": "Perplexity AI",
+    "description": "An AI-native search engine providing real-time cited answers.\nReplaces traditional search for researchers and knowledge workers.",
+    "price": 20,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Perplexity_AI_logo.svg",
+    "status": "popular"
+  },
+  {
+    "id": 5,
+    "title": "Midjourney",
+    "description": "The gold standard for high-fidelity AI image generation.\nVersion 7 offers unparalleled photorealism and artistic control.",
+    "price": 10,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Midjourney_Emblem.png",
+    "status": "mostwanted"
+  },
+  {
+    "id": 6,
+    "title": "ElevenLabs",
+    "description": "Advanced AI audio platform for lifelike speech synthesis.\nSupports instant voice cloning and high-fidelity dubbing in 30+ languages.",
+    "price": 5,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/1/15/ElevenLabs_Logo.png",
+    "status": "favourite"
+  },
+  {
+    "id": 7,
+    "title": "Cursor",
+    "description": "An AI-powered code editor built on top of VS Code.\nFeatures a native 'Agent Mode' for multi-file software engineering.",
+    "price": 20,
+    "image": "https://www.cursor.com/assets/images/logo.svg",
+    "status": "mostwanted"
+  },
+  {
+    "id": 8,
+    "title": "Canva Magic Studio",
+    "description": "Design platform enhanced with a full suite of AI tools.\nIncludes text-to-graphic, photo expansion, and automated layouts.",
+    "price": 12.99,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg",
+    "status": "popular"
+  },
+  {
+    "id": 9,
+    "title": "Suno",
+    "description": "Generative AI for high-fidelity music and full song creation.\nProduces radio-quality tracks with lyrics and vocals from text.",
+    "price": 8,
+    "image": "https://suno.com/logo.png",
+    "status": "favourite"
+  },
+  {
+    "id": 10,
+    "title": "Runway Gen-3",
+    "description": "Professional-grade AI video generation and editing suite.\nOffers advanced temporal consistency for cinematic storytelling.",
+    "price": 12,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Runway_logo.png",
+    "status": "mostwanted"
+  },
+  {
+    "id": 11,
+    "title": "Grammarly AI",
+    "description": "Personalized writing assistant for clarity and professional tone.\nNow includes generative AI prompts for instant drafting and rewrites.",
+    "price": 12,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Grammarly_logo.svg",
+    "status": "popular"
+  },
+  {
+    "id": 12,
+    "title": "Notion AI",
+    "description": "AI-powered workspace for notes, docs, and project management.\nSummarizes long meetings and extracts action items automatically.",
+    "price": 8,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png",
+    "status": "favourite"
+  },
+  {
+    "id": 13,
+    "title": "HeyGen",
+    "description": "AI video platform for creating photorealistic talking avatars.\nAutomates lip-syncing for marketing and educational content.",
+    "price": 24,
+    "image": "https://www.heygen.com/favicon.ico",
+    "status": "mostwanted"
+  },
+  {
+    "id": 14,
+    "title": "DeepL",
+    "description": "The world's most accurate AI translator using neural networks.\nOutperforms competitors in nuance and professional terminology.",
+    "price": 8.74,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/1/1b/DeepL_logo.svg",
+    "status": "favourite"
+  },
+  {
+    "id": 15,
+    "title": "Zapier Central",
+    "description": "Automation hub for creating custom AI agents and workflows.\nConnects 6,000+ apps to perform complex, multi-step digital tasks.",
+    "price": 0,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/01/Zapier_logo.svg",
+    "status": "popular"
+  },
+  {
+    "id": 16,
+    "title": "Microsoft Copilot",
+    "description": "Your everyday AI companion integrated into Windows and Office.\nEnhances productivity across Excel, PowerPoint, and Outlook.",
+    "price": 20,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Microsoft_Copilot_logo.svg",
+    "status": "popular"
+  },
+  {
+    "id": 17,
+    "title": "Jasper",
+    "description": "Enterprise-grade AI content platform for marketing teams.\nEnsures brand voice consistency across all generated copy.",
+    "price": 39,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/2/23/Jasper_AI_logo.png",
+    "status": "favourite"
+  },
+  {
+    "id": 18,
+    "title": "Descript",
+    "description": "AI-powered video and podcast editor using text-based editing.\nFeatures 'Overdub' for voice correction and automated studio sound.",
+    "price": 12,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/1/14/Descript_Logo.png",
+    "status": "favourite"
+  },
+  {
+    "id": 19,
+    "title": "Kimi",
+    "description": "Rising star in long-context AI processing and chat.\nHighly efficient for analyzing thousands of pages of documents.",
+    "price": 0,
+    "image": "https://www.kimi.ai/favicon.ico",
+    "status": "mostwanted"
+  },
+  {
+    "id": 20,
+    "title": "Leonardo.ai",
+    "description": "Creative production platform for high-quality visual assets.\nOffers fine-tuned models for gaming and marketing materials.",
+    "price": 10,
+    "image": "https://leonardo.ai/favicon.ico",
+    "status": "mostwanted"
+  },
+  {
+    "id": 21,
+    "title": "Fireflies.ai",
+    "description": "AI meeting assistant that records, transcribes, and analyzes calls.\nAutomatically syncs summaries to CRMs and project tools.",
+    "price": 10,
+    "image": "https://fireflies.ai/favicon.ico",
+    "status": "favourite"
+  },
+  {
+    "id": 22,
+    "title": "Hugging Face",
+    "description": "The open-source community's home for pre-trained AI models.\nEssential for developers building and hosting their own AI apps.",
+    "price": 0,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Hugging_Face_logo.svg",
+    "status": "popular"
+  },
+  {
+    "id": 23,
+    "title": "Luma Dream Machine",
+    "description": "High-speed AI video generator for realistic 5-second clips.\nKnown for smooth motion and physical accuracy in animations.",
+    "price": 0,
+    "image": "https://lumalabs.ai/favicon.ico",
+    "status": "mostwanted"
+  },
+  {
+    "id": 24,
+    "title": "NotebookLM",
+    "description": "Google's AI research assistant for making sense of complex data.\nCreates interactive 'Audio Overviews' and podcast-style summaries.",
+    "price": 0,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/b/b1/NotebookLM_logo.png",
+    "status": "favourite"
+  }
+]
