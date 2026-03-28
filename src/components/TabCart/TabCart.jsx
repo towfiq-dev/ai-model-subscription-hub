@@ -1,27 +1,42 @@
 import React from 'react';
-import { MdDelete } from 'react-icons/md';
+import { MdDeleteOutline } from 'react-icons/md'; // আরও ক্লিন আইকন
 import { toast } from 'react-toastify';
 
-const TabCart = ({data, carts, setCarts}) => {
-  const handleDeleted=(item)=>{
-  const filterArray = carts.filter (c=> c.id !== item.id) 
-  setCarts(filterArray)
-  toast.success('Cart Delete Successfully')
-  }
+const TabCart = ({ data, carts, setCarts }) => {
+  const handleDeleted = (item) => {
+    const filterArray = carts.filter(c => c.id !== item.id);
+    setCarts(filterArray);
+    toast.error('Item removed from cart'); // ডিলিট হলে এরর বা ওয়ার্নিং টোস্ট ভালো দেখায়
+  };
+
   return (
-    <div className='flex justify-around rounded items-center bg-amber-300 mb-5 gap-6 py-4 '>
-      <img className='w-15 h-15 rounded' src={data.image} alt="" />
-      <div className='space-y-2 max-w-160'>
-      <h2 className='text-2xl font-bold'>{data.title}</h2>
-      <p className='text-justify'>{data.description}</p>
+    <div className="flex flex-col sm:flex-row items-center justify-between bg-white border border-gray-100 p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow gap-6">
+      {/* Image & Info Group */}
+      <div className="flex items-center gap-5 flex-1">
+        <div className="bg-amber-100 p-3 rounded-xl flex-shrink-0">
+          <img className="w-16 h-16 object-contain" src={data.image} alt={data.title} />
+        </div>
+        <div className="space-y-1">
+          <h2 className="text-xl font-bold text-gray-800">{data.title}</h2>
+          <p className="text-sm text-gray-500 line-clamp-1 max-w-xs">{data.description}</p>
+        </div>
       </div>
-      <div className='space-y-2'>
-      <h2 className='text-2xl font-bold'>${data.price}</h2>
-      <span className='font-bold'>per month</span>
+
+      {/* Price & Action Group */}
+      <div className="flex items-center gap-8 w-full sm:w-auto justify-between sm:justify-end">
+        <div className="text-right">
+          <h2 className="text-xl font-bold text-gray-900">${data.price}</h2>
+          <p className="text-xs text-gray-400 font-medium">per month</p>
+        </div>
+        
+        <button 
+          onClick={() => handleDeleted(data)} 
+          className="btn btn-circle btn-ghost text-red-500 hover:bg-red-50"
+          title="Remove Item"
+        >
+          <MdDeleteOutline size={24} />
+        </button>
       </div>
-      <button onClick={()=> handleDeleted(data)} className='btn'>
-        <MdDelete></MdDelete>
-      </button>
     </div>
   );
 };

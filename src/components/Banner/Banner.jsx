@@ -1,53 +1,76 @@
 import React from 'react';
-import BannerImage from '../../assets/banner.png'
+import BannerImage from '../../assets/banner.png';
+
 const Banner = () => {
+  // Smooth Scroll Functionality
+  const scrollToModels = () => {
+    window.scrollTo({
+      top: 850, // আপনার স্ক্রিন সাইজ অনুযায়ী এটি অ্যাডজাস্ট করতে পারেন
+      behavior: 'smooth'
+    });
+  };
+
   return (
-    <div className="relative min-h-162.5 flex items-center overflow-hidden">
-      <div className=" mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center relative z-10">
+    <div className="relative overflow-hidden bg-gradient-to-b from-red-50/50 to-white py-16 lg:py-24">
+      {/* Background Decorative Element */}
+      <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-[500px] h-[500px] bg-red-100/40 rounded-full blur-3xl -z-10"></div>
+
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         {/* Left Content */}
-        <div className="space-y-4">
-          <div className="inline-flex items-center gap-2 bg-red-500/10 border border-red-500/30 text-red-400 text-sm font-medium px-5 py-2 rounded-full">
-            ✨ Frontier AI Models
+        <div className="space-y-8 text-center lg:text-left">
+          <div className="inline-flex items-center gap-2 bg-white border border-red-100 shadow-sm text-red-500 text-sm font-bold px-5 py-2 rounded-full animate-bounce">
+            ✨ Next Gen Intelligence
           </div>
 
-          <h1 className="text-4xl lg:text-5xl font-bold leading-tight tracking-tighter text-red-600">
-            One Subscription.
-            <br />
-            <span className="bg-linear-to-r from-red-400 via-orange-400 to-amber-400 bg-clip-text text-transparent">
-              All the AIs You Need
+          <h1 className="text-5xl lg:text-7xl font-black leading-[1.1] tracking-tight text-gray-900">
+            One Plan. <br />
+            <span className="bg-gradient-to-r from-red-600 via-orange-500 to-amber-500 bg-clip-text text-transparent">
+              All AI Models.
             </span>
           </h1>
 
-          <p className="text-lg text-zinc-700 max-w-lg">
-            Experience the full spectrum of frontier intelligence — all the most
-            advanced AI models, unified under a single, powerful subscription.
+          <p className="text-xl text-gray-600 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+            Stop paying for multiple subscriptions. Access GPT-4, Claude, Gemini, and more through one unified dashboard.
           </p>
 
-          <div className="flex flex-wrap gap-4 pt-4">
-            <button className="bg-red-600 hover:bg-red-500 transition-all px-8 py-4 rounded-2xl font-semibold text-lg shadow-xl shadow-red-500/30 flex items-center gap-3 group text-white">
-              Get Unlimited Access
-              <span className="group-hover:translate-x-1 transition">→</span>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+            <button 
+              onClick={scrollToModels}
+              className="bg-zinc-900 hover:bg-black text-white px-10 py-4 rounded-2xl font-bold text-lg shadow-2xl transition-all hover:-translate-y-1"
+            >
+              Explore Models
+            </button>
+            <button className="bg-white border-2 border-gray-200 px-10 py-4 rounded-2xl font-bold text-lg hover:bg-gray-50 transition-all">
+              Watch Demo
             </button>
           </div>
 
-          <div className="flex items-center gap-8 text-sm text-zinc-600 pt-6">
-            <div>✓ 50+ Frontier Models</div>
-            <div>✓ No Usage Limits</div>
-            <div>✓ Cancel Anytime</div>
+          <div className="flex items-center justify-center lg:justify-start gap-6 text-sm font-bold text-gray-400 uppercase tracking-widest pt-4">
+            <span>Enterprise Ready</span>
+            <span className="w-1.5 h-1.5 bg-gray-300 rounded-full"></span>
+            <span>24/7 Support</span>
           </div>
         </div>
 
-        {/* Right Image */}
+        {/* Right Image with Floating Animation */}
         <div className="relative flex justify-center lg:justify-end">
-          <div className="relative">
+          <div className="relative w-full max-w-lg lg:max-w-none animate-[float_6s_ease-in-out_infinite]">
             <img
-              className="relative h-130 w-auto object-contain drop-shadow-2xl rounded-3xl animate-pulse"
+              className="w-full h-auto drop-shadow-[0_35px_35px_rgba(239,68,68,0.2)] rounded-3xl"
               src={BannerImage}
-              alt="AI Models Banner"
+              alt="AI Visualization"
             />
           </div>
         </div>
       </div>
+
+      {/* Animation CSS */}
+      <style>{`
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-20px); }
+        }
+      `}</style>
     </div>
   );
 };

@@ -3,7 +3,7 @@
     "id": 1,
     "title": "ChatGPT",
     "description": "The industry-leading conversational agent powered by GPT-5.\nExcels at complex reasoning, coding, and multimodal creative tasks.",
-    "price": 20,
+    "price": 0.00,
     "image": "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg",
     "status": "popular"
   },
@@ -20,7 +20,7 @@
     "title": "Claude",
     "description": "Anthropic's safety-focused AI known for human-like writing.\nHighly preferred by developers for its precise coding and Artifacts UI.",
     "price": 20,
-    "image": "https://commons.wikimedia.org/wiki/File:Claude_AI_symbol.svg",
+    "image": "https://avatars.slack-edge.com/2025-05-14/8891273522918_30c38bf627ac73075db6_512.png",
     "status": "popular"
   },
   {
@@ -28,7 +28,7 @@
     "title": "Perplexity AI",
     "description": "An AI-native search engine providing real-time cited answers.\nReplaces traditional search for researchers and knowledge workers.",
     "price": 20,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Perplexity_AI_logo.svg",
+    "image": "https://cdn.shopaccino.com/igmguru/products/claude-ai-pro-3538772486472767_l.jpg?v=547",
     "status": "popular"
   },
   {
@@ -43,8 +43,8 @@
     "id": 6,
     "title": "ElevenLabs",
     "description": "Advanced AI audio platform for lifelike speech synthesis.\nSupports instant voice cloning and high-fidelity dubbing in 30+ languages.",
-    "price": 5,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/1/15/ElevenLabs_Logo.png",
+    "price": 39.99,
+    "image": "https://original.fontsinuse.com/fontsinuse.com/use-images/N229/229981/229981.jpeg",
     "status": "favourite"
   },
   {
@@ -60,23 +60,23 @@
     "title": "Canva Magic Studio",
     "description": "Design platform enhanced with a full suite of AI tools.\nIncludes text-to-graphic, photo expansion, and automated layouts.",
     "price": 12.99,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg",
+    "image": "https://businesslink.ca/wp-content/uploads/2024/04/HeaderCover-Blogs-min-2-scaled-1.webp",
     "status": "popular"
   },
   {
     "id": 9,
     "title": "Suno",
     "description": "Generative AI for high-fidelity music and full song creation.\nProduces radio-quality tracks with lyrics and vocals from text.",
-    "price": 8,
-    "image": "https://suno.com/logo.png",
+    "price": 17,
+    "image": "https://cdn-o.suno.com/favicon-512x512.png",
     "status": "favourite"
   },
   {
     "id": 10,
     "title": "Runway Gen-3",
     "description": "Professional-grade AI video generation and editing suite.\nOffers advanced temporal consistency for cinematic storytelling.",
-    "price": 12,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Runway_logo.png",
+    "price": 32,
+    "image": "https://a.storyblok.com/f/239402/1920x1280/86494847a0/artikel-website-thumbnail.png",
     "status": "mostwanted"
   },
   {
@@ -84,14 +84,14 @@
     "title": "Grammarly AI",
     "description": "Personalized writing assistant for clarity and professional tone.\nNow includes generative AI prompts for instant drafting and rewrites.",
     "price": 12,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Grammarly_logo.svg",
+    "image": "https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHHFT949fUipzkiFOBH3fAiZZUCdYojwUyX2aTonS1aIwMrx6NUIsHfUHSLzjGJFxxiq8rwXckZAP_inAe6ki68mFKhxAIYYzc96KJMP0JY4KC899jXBwKagCNpSWPkAxVBj5ADudR0.gDOfn5L.Bpkg-&format=source",
     "status": "popular"
   },
   {
     "id": 12,
     "title": "Notion AI",
     "description": "AI-powered workspace for notes, docs, and project management.\nSummarizes long meetings and extracts action items automatically.",
-    "price": 8,
+    "price": 28,
     "image": "https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png",
     "status": "favourite"
   },
@@ -108,15 +108,15 @@
     "title": "DeepL",
     "description": "The world's most accurate AI translator using neural networks.\nOutperforms competitors in nuance and professional terminology.",
     "price": 8.74,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/1/1b/DeepL_logo.svg",
+    "image": "https://alfred.app/workflows/alexanderwillner/deepl-translate/icon.png",
     "status": "favourite"
   },
   {
     "id": 15,
     "title": "Zapier Central",
     "description": "Automation hub for creating custom AI agents and workflows.\nConnects 6,000+ apps to perform complex, multi-step digital tasks.",
-    "price": 0,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/0/01/Zapier_logo.svg",
+    "price": 14,
+    "image": "https://cdn.productivity.directory/tools/c2cf4fd4-65e7-4a30-a6a8-1e12647d7a65",
     "status": "popular"
   },
   {
@@ -124,7 +124,7 @@
     "title": "Microsoft Copilot",
     "description": "Your everyday AI companion integrated into Windows and Office.\nEnhances productivity across Excel, PowerPoint, and Outlook.",
     "price": 20,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Microsoft_Copilot_logo.svg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsJ1WZMcYbhYXtw5jLqJT1uJPK2VhA3-vJSw&s",
     "status": "popular"
   },
   {
@@ -132,7 +132,7 @@
     "title": "Jasper",
     "description": "Enterprise-grade AI content platform for marketing teams.\nEnsures brand voice consistency across all generated copy.",
     "price": 39,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/2/23/Jasper_AI_logo.png",
+    "image": "https://sm.pcmag.com/pcmag_me/review/j/jasper/jasper_pknd.jpg",
     "status": "favourite"
   },
   {
@@ -140,14 +140,14 @@
     "title": "Descript",
     "description": "AI-powered video and podcast editor using text-based editing.\nFeatures 'Overdub' for voice correction and automated studio sound.",
     "price": 12,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/1/14/Descript_Logo.png",
+    "image": "https://i0.wp.com/softwareengineeringdaily.com/wp-content/uploads/2020/03/Descript-1.png?fit=1200%2C630",
     "status": "favourite"
   },
   {
     "id": 19,
     "title": "Kimi",
     "description": "Rising star in long-context AI processing and chat.\nHighly efficient for analyzing thousands of pages of documents.",
-    "price": 0,
+    "price": 33,
     "image": "https://www.kimi.ai/favicon.ico",
     "status": "mostwanted"
   },
@@ -156,7 +156,7 @@
     "title": "Leonardo.ai",
     "description": "Creative production platform for high-quality visual assets.\nOffers fine-tuned models for gaming and marketing materials.",
     "price": 10,
-    "image": "https://leonardo.ai/favicon.ico",
+    "image": "https://neurotoolshq.com/wp-content/uploads/2025/07/Leonardo-AI-logo-2.jpg",
     "status": "mostwanted"
   },
   {
@@ -171,24 +171,24 @@
     "id": 22,
     "title": "Hugging Face",
     "description": "The open-source community's home for pre-trained AI models.\nEssential for developers building and hosting their own AI apps.",
-    "price": 0,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Hugging_Face_logo.svg",
+    "price": 25,
+    "image": "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/cecbccba-6358-476e-9fd8-e2807de9f220/Frame_118.png?t=1693044751",
     "status": "popular"
   },
   {
     "id": 23,
     "title": "Luma Dream Machine",
     "description": "High-speed AI video generator for realistic 5-second clips.\nKnown for smooth motion and physical accuracy in animations.",
-    "price": 0,
-    "image": "https://lumalabs.ai/favicon.ico",
+    "price": 22,
+    "image": "https://images.yourstory.com/cs/2/96eabe90392211eb93f18319e8c07a74/Untitleddesign4-1718366006971.png?mode=crop&crop=faces&ar=2%3A1&format=auto&w=1920&q=75",
     "status": "mostwanted"
   },
   {
     "id": 24,
     "title": "NotebookLM",
     "description": "Google's AI research assistant for making sense of complex data.\nCreates interactive 'Audio Overviews' and podcast-style summaries.",
-    "price": 0,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/b/b1/NotebookLM_logo.png",
+    "price": 30,
+    "image": "https://devicebase.net/products/5351/teaser.jpg",
     "status": "favourite"
   }
 ]

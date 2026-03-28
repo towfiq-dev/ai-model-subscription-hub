@@ -2,50 +2,54 @@ import React from 'react';
 import TabCart from '../TabCart/TabCart';
 import { toast } from 'react-toastify';
 
-const Cart = ({carts, setCarts}) => {
-  const totalPrice = carts.reduce((sum, item)=>{
-    return(sum + item.price)
-  },0)
+const Cart = ({ carts, setCarts }) => {
+  const totalPrice = carts.reduce((sum, item) => sum + item.price, 0);
 
-  const handlePayment=()=>{
-  setCarts([])
-  toast.success('Your subscription payment successful')
+  const handlePayment = () => {
+    setCarts([]);
+    toast.success('Payment successful! Welcome to the future of AI.');
+  };
+
+  if (carts.length === 0) {
+    return (
+      <div className="text-center py-20 bg-gray-50 rounded-3xl border-2 border-dashed">
+        <h2 className="text-3xl font-bold text-gray-400">Your Cart is Empty</h2>
+        <p className="text-gray-500 mt-2">Browse our AI models and start your subscription.</p>
+      </div>
+    );
   }
 
-  
   return (
-    <div className='max-w-310 mx-auto'>
-      <h2 className='text-2xl font-bold mb-7'>Your Cart</h2>
-      {
-        carts.length === 0?
-        <div className='text-center space-y-2 mb-5'>
-          <h2 className='text-2xl font-bold'>No Cart Available</h2>
-          <p className='text-gray-500'>Your Cart is empty. Please Subscribe our Service.</p>
-        </div>
-        :
-        (
-          carts.map(data=> <TabCart 
-        data ={data}
-        carts ={carts}
-        setCarts = {setCarts}
-        ></TabCart>)
-        )
-      }
-
-      {
-        carts.length === 0?
-        '':
-        <div>
-          <div className='flex justify-between items-center bg-black text-white py-5 px-3 rounded mb-4'>
-        <h2 className='text-3xl font-bold'>Total</h2>
-        <span className='font-bold '>${totalPrice.toFixed(2)}</span>
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+      {/* Items List */}
+      <div className="lg:col-span-2 space-y-4">
+        {carts.map(data => (
+          <TabCart key={data.id} data={data} carts={carts} setCarts={setCarts} />
+        ))}
       </div>
-      <button onClick={handlePayment} className='btn bg-red-500 w-full text-2xl p-6 text-white mb-3'>
-        Proceed to checkout
-      </button>
+
+      {/* Summary Sidebar */}
+      <div className="bg-white p-8 rounded-3xl border shadow-sm h-fit sticky top-5">
+        <h3 className="text-xl font-bold mb-6">Order Summary</h3>
+        <div className="space-y-4">
+          <div className="flex justify-between">
+            <span className="text-gray-500">Subtotal</span>
+            <span className="font-semibold">${totalPrice.toFixed(2)}</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-gray-500">Tax</span>
+            <span className="font-semibold">$0.00</span>
+          </div>
+          <div className="divider"></div>
+          <div className="flex justify-between items-center text-xl font-bold">
+            <span>Total</span>
+            <span className="text-success">${totalPrice.toFixed(2)}</span>
+          </div>
+          <button onClick={handlePayment} className="btn btn-success btn-block text-white mt-6 rounded-xl">
+            Proceed to Checkout
+          </button>
         </div>
-      }
-      
+      </div>
     </div>
   );
 };

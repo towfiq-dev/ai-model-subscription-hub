@@ -1,46 +1,60 @@
-import React, { Suspense, useState } from 'react';
+import React, { Suspense, useState, useMemo } from 'react';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import Banner from './components/Banner/Banner';
 import Footer from './components/Footer/Footer';
 import Subscription from './components/Subscription/Subscription';
 import Cart from './components/Cart/Cart';
-const subscriptionFetch= async()=> {
-  const res= await fetch('model.json')
-  return(res.json())
-}
+
+// ডেটা ফেচিং আলাদা ফাংশন
+const fetchSubscriptions = async () => {
+  const res = await fetch('model.json');
+  return res.json();
+};
+
 const App = () => {
-  const subscriptionPromise = subscriptionFetch()
-  const [activeTab, setActiveTab] = useState('models')
-  const [carts, setCarts] =useState([])
-  console.log(carts);
-  
+  // useMemo ব্যবহার করে অপ্রয়োজনীয় রেন্ডার কমানো যায়
+  const subscriptionPromise = useMemo(() => fetchSubscriptions(), []);
+  const [activeTab, setActiveTab] = useState('models');
+  const [carts, setCarts] = useState([]);
+
   return (
-    <section>
-      <Navbar></Navbar>
-      <Banner></Banner>
-  <div role="tablist" className="tabs tabs-box justify-center py-2 mb-6 gap-2 max-w-310 mx-auto">
-    <button onClick={()=>setActiveTab('models')} role="tab" className={`tab btn rounded-3xl w-50  border ${activeTab === 'models'? "bg-green-500": ''}`}>Models</button>
-    <button onClick={()=>setActiveTab('cart')} role="tab" className={`tab btn  rounded-3xl w-50 border ${activeTab === 'cart'? "bg-green-500": ''}`}>Carts{carts.length}</button>
-  </div>
-      {
-        activeTab === 'models'?
-        <Suspense fallback={<span className="loading loading-bars loading-xl"></span>}>
-      <Subscription 
-      subscriptionPromise = {subscriptionPromise}
-      carts ={carts}
-      setCarts = {setCarts}
-      ></Subscription>
-      </Suspense>
-      :
-      <Cart 
-      carts ={carts}
-      setCarts = {setCarts}
-      ></Cart>
-      }
-      <Footer></Footer>
+    <main className="min-h-screen flex flex-col">
+      <Navbar cartsCount={carts.length} />
+      <Banner />
       
-    </section>
+      <div className="flex-grow max-w-7xl mx-auto w-full px-4 py-10">
+        {/* Tab Switcher */}
+        <div className="tabs tabs-boxed justify-center mb-10 bg-transparent gap-4">
+          <button 
+            onClick={() => setActiveTab('models')} 
+            className={`btn btn-md rounded-full px-8 ${activeTab === 'models' ? 'btn-success text-white' : 'btn-ghost border-gray-300'}`}
+          >
+            AI Models
+          </button>
+          <button 
+            onClick={() => setActiveTab('cart')} 
+            className={`btn btn-md rounded-full px-8 ${activeTab === 'cart' ? 'btn-success text-white' : 'btn-ghost border-gray-300'}`}
+          >
+            My Cart ({carts.length})
+          </button>
+        </div>
+
+        <Suspense fallback={<div className="flex justify-center py-20"><span className="loading loading-bars loading-lg text-success"></span></div>}>
+          {activeTab === 'models' ? (
+            <Subscription 
+              subscriptionPromise={subscriptionPromise} 
+              carts={carts} 
+              setCarts={setCarts} 
+            />
+          ) : (
+            <Cart carts={carts} setCarts={setCarts} />
+          )}
+        </Suspense>
+      </div>
+
+      <Footer />
+    </main>
   );
 };
 

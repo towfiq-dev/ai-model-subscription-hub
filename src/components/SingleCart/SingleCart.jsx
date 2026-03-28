@@ -1,25 +1,43 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { toast } from 'react-toastify';
 
-const SingleCart = ({cartData, carts, setCarts}) => {
-  const {title, description, price, image, status} = cartData
-  const [isSubscribe, setIsSubscribe] = useState(false)
-  const handleSubscription = ()=>{
-  setIsSubscribe()
-  toast.success('Item added to Cart')
-  setCarts([...carts, cartData])
-  }
+const SingleCart = ({ cartData, carts, setCarts }) => {
+  const { title, description, price, image, id } = cartData;
+  
+  // চেক করা আইটেমটি অলরেডি কার্টে আছে কি না
+  const isInCart = carts.some(item => item.id === id);
+
+  const handleSubscription = () => {
+    if (isInCart) {
+      toast.warning('This model is already in your cart!');
+      return;
+    }
+    setCarts([...carts, cartData]);
+    toast.success(`${title} added to cart!`);
+  };
+
   return (
-    <div className='border rounded mb-10'>
-      <div className='grid justify-center bg-amber-200 p-2 w-full rounded'><img className='w-40 h-40' src={image} alt="" /></div>
-      <div className='p-3 space-y-1.5'>
-        <h2 className='text-2xl font-bold'>{title}</h2>
-      <p className='text-justify'>{description}</p>
-      <div className='flex gap-1'>
-        <h2 className='text-2xl font-bold'>${price}</h2> 
-        <span className='font-bold'>/month</span>
-      </div>
-      <button onClick={()=>handleSubscription()} className={`btn w-full font-bold ${isSubscribe === false? 'bg-gray-500': 'bg-red-500'}`}>{isSubscribe === false? 'Subscribe Now' : 'Subscribed'}</button>
+    <div className="card bg-base-100 shadow-xl border border-gray-100 hover:shadow-2xl transition-all group">
+      <figure className="px-6 pt-6">
+        <div className="bg-amber-50 rounded-2xl p-4 w-full flex justify-center group-hover:bg-amber-100 transition-colors">
+          <img src={image} alt={title} className="w-32 h-32 object-contain" />
+        </div>
+      </figure>
+      <div className="card-body">
+        <h2 className="card-title text-xl">{title}</h2>
+        <p className="text-sm text-gray-500 line-clamp-2">{description}</p>
+        <div className="flex items-baseline gap-1 mt-2">
+          <span className="text-2xl font-bold">${price}</span>
+          <span className="text-gray-400 text-sm">/month</span>
+        </div>
+        <div className="card-actions mt-4">
+          <button 
+            onClick={handleSubscription} 
+            className={`btn btn-block rounded-xl ${isInCart ? 'btn-disabled' : 'btn-neutral'}`}
+          >
+            {isInCart ? 'In Cart' : 'Subscribe Now'}
+          </button>
+        </div>
       </div>
     </div>
   );
