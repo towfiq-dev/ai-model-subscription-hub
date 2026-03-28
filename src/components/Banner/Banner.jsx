@@ -5,7 +5,7 @@ const Banner = () => {
   // Smooth Scroll Functionality
   const scrollToModels = () => {
     window.scrollTo({
-      top: 850, // আপনার স্ক্রিন সাইজ অনুযায়ী এটি অ্যাডজাস্ট করতে পারেন
+      top: 850,
       behavior: 'smooth'
     });
   };

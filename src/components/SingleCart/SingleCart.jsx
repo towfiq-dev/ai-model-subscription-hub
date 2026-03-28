@@ -4,7 +4,6 @@ import { toast } from 'react-toastify';
 const SingleCart = ({ cartData, carts, setCarts }) => {
   const { title, description, price, image, id } = cartData;
   
-  // চেক করা আইটেমটি অলরেডি কার্টে আছে কি না
   const isInCart = carts.some(item => item.id === id);
 
   const handleSubscription = () => {

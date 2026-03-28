@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../../assets/logo.png';
 import { toast } from 'react-toastify';
-import { FaTwitter, FaYoutube, FaFacebookF } from 'react-icons/fa'; // React Icons ব্যবহার করলে কোড ক্লিন থাকে
+import { FaTwitter, FaYoutube, FaFacebookF } from 'react-icons/fa';
 
 const Footer = () => {
   const congrats = (e) => {

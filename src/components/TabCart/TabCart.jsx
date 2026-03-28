@@ -1,12 +1,12 @@
 import React from 'react';
-import { MdDeleteOutline } from 'react-icons/md'; // আরও ক্লিন আইকন
+import { MdDeleteOutline } from 'react-icons/md';
 import { toast } from 'react-toastify';
 
 const TabCart = ({ data, carts, setCarts }) => {
   const handleDeleted = (item) => {
     const filterArray = carts.filter(c => c.id !== item.id);
     setCarts(filterArray);
-    toast.error('Item removed from cart'); // ডিলিট হলে এরর বা ওয়ার্নিং টোস্ট ভালো দেখায়
+    toast.error('Item removed from cart');
   };
 
   return (

@@ -6,14 +6,13 @@ import Footer from './components/Footer/Footer';
 import Subscription from './components/Subscription/Subscription';
 import Cart from './components/Cart/Cart';
 
-// ডেটা ফেচিং আলাদা ফাংশন
 const fetchSubscriptions = async () => {
   const res = await fetch('model.json');
   return res.json();
 };
 
 const App = () => {
-  // useMemo ব্যবহার করে অপ্রয়োজনীয় রেন্ডার কমানো যায়
+
   const subscriptionPromise = useMemo(() => fetchSubscriptions(), []);
   const [activeTab, setActiveTab] = useState('models');
   const [carts, setCarts] = useState([]);
